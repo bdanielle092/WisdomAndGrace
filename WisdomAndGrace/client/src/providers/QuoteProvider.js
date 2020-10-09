@@ -18,7 +18,8 @@ export function QuoteProvider(props) {
         }
       }).then(resp => resp.json())
         .then(setQuotes));
-
+  //is a function that allows us to add a quote. 
+  //the token is for authorization
   const addQuote = (quote) =>
     getToken().then((token) =>
       fetch(apiUrl, {
